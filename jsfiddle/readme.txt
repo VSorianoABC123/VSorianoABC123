@@ -32,3 +32,6 @@ Pindola 2.2.4
 Formulari d'hospital per fer proves de validacions de camps de dades
 https://jsfiddle.net/VSorianoABC123/4fdz501y/85/
 
+Pindola 2.3
+Supermercat en el que pots buscar l'id d'un producte a partir de bucles, ifs i switch
+https://jsfiddle.net/VSorianoABC123/0wuqv5mb/72/
