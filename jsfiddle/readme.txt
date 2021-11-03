@@ -35,3 +35,18 @@ https://jsfiddle.net/VSorianoABC123/4fdz501y/85/
 Pindola 2.3
 Supermercat en el que pots buscar l'id d'un producte a partir de bucles, ifs i switch
 https://jsfiddle.net/VSorianoABC123/0wuqv5mb/72/
+
+Pindola 3.1
+Programa senzill on es dona un número i retorna si es corrercte o no.
+https://jsfiddle.net/VSorianoABC123/fw10kunv/57/
+
+Pindola 3.2
+Programa que utilitza diferents funcions que es poden utilitzar amb els strings.
+https://jsfiddle.net/VSorianoABC123/k6nbse4y/2/
+
+Pindola 3.3
+Gestor que maneja una array de cursos.
+https://jsfiddle.net/VSorianoABC123/8jho3w1a/20/
+
+
+
