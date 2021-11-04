@@ -47,6 +47,9 @@ https://jsfiddle.net/VSorianoABC123/k6nbse4y/2/
 Pindola 3.3
 Gestor que maneja una array de cursos.
 https://jsfiddle.net/VSorianoABC123/8jho3w1a/20/
+Pindola 4.1.1
+Demana un usuari i el mostra informació amb callbacks.
+https://jsfiddle.net/VSorianoABC123/aoq9x8mn/48/
 
 
 
