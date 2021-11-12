@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Máquina Inutil</title>    
+    <link href="../style/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+            
+    <h2>Simulador de Máquina Inutil</h2>
+
+
+    <!-- El primer parrafo aparece tras un segundo -->
+    <p id="parrafo" style="visibility:hidden">Adelante, presiona el botón.</p>
+    
+    <img onclick="hanFetClick()" id="imgMaquina" src="./media/webApp/maquina1.jpg" width="100px" height="100px">
+    <br>
+    <button onclick="hanFetClick()" id="myBtn">Presionar.</button>
+
+    <p>Lista de Clicks</p>
+    <ul id="listaClicks">
+        
+    </ul>
+
+     
+    <script>
+        
+        //Función del parrafo
+        
+        document.getElementById("parrafo").addEventListener("click", presionarBoton(mostrarBoton));                
+        
+        
+        //Primero se comprueba si se ha presionado la imagen o el botón.
+
+        function hanFetClick(){
+            $tipus = event.currentTarget.nodeName;
+            if ($tipus === "IMG"){
+                console.log("Has prés l'imatge.");
+
+            }else if ($tipus === "BUTTON"){
+                console.log("Has prés el botó.");
+            }
+            else {
+                console.log("Error.");
+            }     
+
+            // Y luego empieza la función de la imagen
+            myFunction(callback1,callback2,callback3,callback4);
+            
+        }
+
+        function myFunction(callback1, callback2, callback3, callback4){
+
+
+            //Ara, cada vegada que es cliqui, s'afegirá la data de quan s'ha clicat.
+            afegirData();  
+
+            //Llama a 4 imagenes en tiempos diferentes, como una animación.
+            callback1();
+            var miVar = setTimeout(function(){ callback2() }, 1000); 
+            
+            var miVar = setTimeout(function(){ callback3() }, 3000); 
+            
+            var miVar = setTimeout(function(){ callback4() }, 4000);                   
+        }
+
+        function callback1(){
+            document.getElementById("imgMaquina").src = "./media/webApp/maquina2.jpg";
+        }
+        function callback2(){
+            document.getElementById("imgMaquina").src = "./media/webApp/maquina3.jpg";
+        }
+        function callback3(){
+            document.getElementById("imgMaquina").src = "./media/webApp/maquina4.jpg";
+        }
+        function callback4(){
+            document.getElementById("imgMaquina").src = "./media/webApp/maquina1.jpg";
+        }
+
+        function presionarBoton(callback1){
+            var miVar = setInterval(function(){ callback1() }, 1000);       
+            
+            
+        }
+            
+        function mostrarBoton(){
+
+            document.getElementById("parrafo").style.visibility = "visible";
+        }
+
+        function afegirData(){
+            
+
+            //Agafa tots els clicks que s'han fet abans i els afegeix el nou click
+            
+            const lista = document.getElementById("listaClicks").innerHTML;
+
+            const actual =  new Date();
+
+            const valor = lista + "<li>" + actual + "</li>";  
+
+            
+            document.getElementById("listaClicks").innerHTML = valor;  
+
+        }
+    </script>
+
+</body>
+</html>
